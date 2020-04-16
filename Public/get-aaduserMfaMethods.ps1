@@ -23,7 +23,7 @@ function Get-aaduserMfaMethods {
  Date: 2020/9/14
  Revisions:
  
- 
+ #todo this would be a good one to set in manifest to limit displayed fields from object
 
 #>
 
@@ -54,6 +54,9 @@ BEGIN {
                     DisplayName = $null
                     MFAMethod = $null
                     DefaultMethod = $null
+                    MFAAlternativePhoneNumber = $null
+                    MFAPhoneNumber = $null
+                    MFAemail = $null
                     
                     
                  }
@@ -65,17 +68,20 @@ PROCESS {
     foreach ($u in $userprincipalname) {
         
         $theUser = Get-MsolUser -UserPrincipalName $u
-        $methods = ($theUser | select -ExpandProperty StrongAuthenticationmethods)
 
         $obj.UserPrincipalName = $theUser.UserPrincipalName
         $obj.DisplayName = $theUser.DisplayName
+        $obj.MFAPhoneNumber = $theUser.StrongAuthenticationUserDetails.PhoneNumber
+        $obj.MFAAlternativePhoneNumber = $theUser.StrongAuthenticationUserDetails.AlternativePhoneNumber
+        $obj.MFAemail = $theUser.StrongAuthenticationUserDetails.email
         
+        $methods = ($theUser | select -ExpandProperty StrongAuthenticationmethods)
         foreach ($method in $methods) {
             $obj.MFAMethod = $method.MethodType
             $obj.DefaultMethod = $method.IsDefault
 
-            #select here is bad style
-            Write-Output $obj | select Displayname,UserPrincipalName, MFAMethod,DefaultMethod
+            #select here is bad style :(
+            Write-Output $obj | select Displayname,UserPrincipalName,MFAPhoneNumber, MFAAlternativePhoneNumber,MFAemail, MFAMethod,DefaultMethod
         }
 
     }
