@@ -45,7 +45,6 @@ switch ($skuID) {
     AAD_PREMIUM { $obj.SkuName = 'Azure Active Directory Premium P1'}
     AAD_PREMIUM_P2 { $obj.SkuName = 'Azure Active Directory Premium P2'}
     ATP_ENTERPRISE { $obj.SkuName = 'Office 365 Advanced Threat Protection (Plan 1)'}
-    CCIBOTS_PRIVPREV_VIRAL  { $obj.SkuName = 'Dynamics 365 AI for Customer Service Virtual Agents Viral SKU'}
     CRMPLAN2 { $obj.SkuName = 'Microsoft Dynamics Crm Online Basic'}
     CRMSTANDARD { $obj.SkuName = 'Microsoft Dynamics Crm Online'}
     DESKLESSPACK { $obj.SkuName = 'Office 365 F1'}
@@ -80,6 +79,7 @@ switch ($skuID) {
     EXCHANGESTANDARD { $obj.SkuName = 'Exchange Online (Plan 1)'}
     EXCHANGETELCO { $obj.SkuName = 'Exchange Online Pop'}
     FLOW_FREE { $obj.SkuName = "Microsoft Power Automate Free"}
+    FORMS_PRO { $obj.SkuName = "Forms Pro Trial"}
     IDENTITY_THREAT_PROTECTION { $obj.SkuName = 'Microsoft 365 E5 Security'}
     IDENTITY_THREAT_PROTECTION_FOR_EMS_E5 { $obj.SkuName = 'Microsoft 365 E5 Security For Ems E5'}
     INFORMATION_PROTECTION_COMPLIANCE { $obj.SkuName = 'Microsoft 365 E5 Compliance'}
@@ -87,7 +87,6 @@ switch ($skuID) {
     IT_ACADEMY_AD { $obj.SkuName = 'Ms Imagine Academy'}
     LITEPACK { $obj.SkuName = 'Office 365 Small Business'}
     LITEPACK_P2 { $obj.SkuName = 'Office 365 Small Business Premium'}
-    M365_E5_SUITE_COMPONENTS { $obj.SkuName = 'Microsoft 365 E5 Suite features'}
     M365EDU_A1 { $obj.SkuName = 'Microsoft 365 A1'}
     M365EDU_A3_FACULTY { $obj.SkuName = 'Microsoft 365 A3 For Faculty'}
     M365EDU_A3_STUDENT { $obj.SkuName = 'Microsoft 365 A3 For Students'}
@@ -101,13 +100,11 @@ switch ($skuID) {
     MCOPSTN2 { $obj.SkuName = 'Skype For Business Pstn Domestic And International Calling'}
     MCOPSTN5 { $obj.SkuName = 'Skype For Business Pstn Domestic Calling (120 Minutes)'}
     MCOSTANDARD { $obj.SkuName = 'Skype For Business Online (Plan 2)'}
-    MEETING_ROOM { $obj.SkuName = 'Microsoft Teams Rooms Standard'}
     MIDSIZEPACK { $obj.SkuName = 'Office 365 Midsize Business'}
     O365_BUSINESS { $obj.SkuName = 'Office 365 Business'}
     O365_BUSINESS_ESSENTIALS { $obj.SkuName = 'Office 365 Business Essentials'}
     O365_BUSINESS_PREMIUM { $obj.SkuName = 'Office 365 Business Premium'}
     OFFICESUBSCRIPTION { $obj.SkuName = 'Office 365 Proplus'}
-    PHONESYSTEM_VIRTUALUSER { $obj.SkuName = 'Microsoft 365 Phone System - Virtual User'}
     POWER_BI_ADDON { $obj.SkuName = 'Power Bi For Office 365 Add-On'}
     POWER_BI_PRO { $obj.SkuName = 'Power Bi Pro'}
     POWER_BI_STANDARD{ $obj.SkuName = "Power BI (free)"}
@@ -133,7 +130,7 @@ switch ($skuID) {
     SPE_E3_USGOV_DOD { $obj.SkuName = 'Microsoft 365 E3_Usgov_Dod'}
     SPE_E3_USGOV_GCCHIGH { $obj.SkuName = 'Microsoft 365 E3_Usgov_Gcchigh'}
     SPE_E5 { $obj.SkuName = 'Microsoft 365 E5'}
-    SPE_F1 { $obj.SkuName = 'Microsoft 365 F1'}
+    SPE_F1 { $obj.SkuName = 'Microsoft 365 F3*'}
     SPZA_IW { $obj.SkuName = 'App Connect'}
     STANDARDPACK { $obj.SkuName = 'Office 365 E1'}
     STANDARDWOFFPACK { $obj.SkuName = 'Office 365 E2'}
